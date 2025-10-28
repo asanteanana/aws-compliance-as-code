@@ -2,7 +2,7 @@
 
 A comprehensive demonstration of implementing compliance controls as code using Terraform, AWS Config, and Python. This project showcases how to build infrastructure that follows security best practices and automatically validates compliance requirements with automated Slack notifications.
 
-## 🎯 Features
+## Features
 
 - **Infrastructure as Code**: Terraform-based AWS resource provisioning with built-in compliance controls
 - **Automated Compliance Checking**: Integration with AWS Config for continuous compliance monitoring
@@ -10,7 +10,7 @@ A comprehensive demonstration of implementing compliance controls as code using 
 - **Audit Trail**: CSV export for long-term compliance tracking
 - **Security Best Practices**: Encryption, versioning, access controls, and proper tagging
 
-## 📸 Demo & Screenshots
+## Demo & Screenshots
 
 ### Context-Aware Slack Compliance Report
 
@@ -42,7 +42,7 @@ A comprehensive demonstration of implementing compliance controls as code using 
 
 *Python automation checking AWS Config compliance rules*
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 aws-compliance-as-code/
@@ -59,7 +59,7 @@ aws-compliance-as-code/
 └── README.md                    # This documentation
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -118,7 +118,7 @@ aws-compliance-as-code/
    python report.py
    ```
 
-## 📋 Compliance Controls Implemented
+## Compliance Controls Implemented
 
 ### Infrastructure Security
 
@@ -143,7 +143,7 @@ aws-compliance-as-code/
   - Configurable log retention
   - Structured logging
 
-## 🔍 Compliance Reporting
+## Compliance Reporting
 
 The `report.py` script provides comprehensive compliance checking:
 
@@ -179,7 +179,7 @@ The compliance report includes:
 - **Remediation Guides:** Direct links to fix compliance issues
 - **Timestamps:** When checks were performed
 
-## 🔧 Customization
+## Customization
 
 ### Adding New Compliance Rules
 
@@ -222,7 +222,7 @@ variable "custom_setting" {
 }
 ```
 
-## 📊 Example Output
+## Example Output
 
 ### Slack Notification
 
@@ -241,7 +241,7 @@ Remediation: Enable default bucket encryption
 ────────────────────────────
 ```
 
-## 🛡️ Security Considerations
+## Security Considerations
 
 ### Never Commit These Files
 
@@ -258,7 +258,7 @@ Remediation: Enable default bucket encryption
 - Enable GitHub Secret Scanning in repository settings
 - Use pre-commit hooks to prevent secret commits
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Please:
 
@@ -268,7 +268,7 @@ Contributions welcome! Please:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📚 Additional Resources
+## Additional Resources
 
 - [Terraform AWS Provider Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 - [AWS Config User Guide](https://docs.aws.amazon.com/config/latest/developerguide/)
@@ -276,11 +276,11 @@ Contributions welcome! Please:
 - [Compliance-as-Code Patterns](https://www.hashicorp.com/resources/compliance-as-code)
 - [Infrastructure Security Guidelines](https://aws.amazon.com/architecture/security-identity-compliance/)
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This is a demonstration project for educational purposes. Adapt the compliance rules and infrastructure to your specific requirements and security policies. Always test thoroughly in a non-production environment before deploying to production.
 
