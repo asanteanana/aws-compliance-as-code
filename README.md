@@ -250,7 +250,7 @@ Remediation: Enable default bucket encryption
 - `.aws/credentials` - AWS access keys
 - Any files with real account IDs or personal information
 
-### Best Practices
+### Best Practices I've Learned
 
 - Always use `.env.example` as a template
 - Rotate keys immediately if accidentally committed
@@ -258,15 +258,6 @@ Remediation: Enable default bucket encryption
 - Enable GitHub Secret Scanning in repository settings
 - Use pre-commit hooks to prevent secret commits
 
-## Contributing
-
-Contributions welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## Additional Resources
 
@@ -279,11 +270,3 @@ Contributions welcome! Please:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Disclaimer
-
-This is a demonstration project for educational purposes. Adapt the compliance rules and infrastructure to your specific requirements and security policies. Always test thoroughly in a non-production environment before deploying to production.
-
----
-
-**Note:** This project demonstrates modern DevOps practices including Infrastructure as Code, automated compliance checking, and integration with collaboration tools. It's designed as a portfolio piece showcasing cloud security and automation skills.
