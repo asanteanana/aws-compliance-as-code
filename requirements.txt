@@ -1,0 +1,10 @@
+# Compliance-as-Code Demo Requirements
+# Python dependencies for the compliance reporting tool
+
+boto3>=1.28.0  # For AWS Config compliance checking
+slack_sdk>=3.37.0  # For Slack notifications
+python-dotenv>=1.0.0  # For loading .env files
+# pytest>=7.4.0  # For testing
+# black>=23.7.0  # For code formatting
+# pylint>=2.17.0  # For code quality checks
+

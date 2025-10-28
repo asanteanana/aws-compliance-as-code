@@ -1,0 +1,45 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Compliance reports
+compliance-report.*
+security-report.*
+monitoring-report.*
+
+
+# AWS credentials and config
+.aws/
+aws-credentials
+*credentials.json
+
+# Additional environment files
+*.env
+!.env.example

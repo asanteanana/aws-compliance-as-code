@@ -1,0 +1,105 @@
+# CI/CD Pipeline Configuration for Compliance-as-Code
+# This file demonstrates automated compliance checking in CI/CD
+
+name: Compliance Check
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 2 * * 1'  # Weekly compliance check
+
+jobs:
+  terraform-compliance:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v2
+      with:
+        terraform_version: 1.5.0
+    
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Terraform Init
+      run: terraform init
+    
+    - name: Terraform Validate
+      run: terraform validate
+    
+    - name: Terraform Format Check
+      run: terraform fmt -check -diff
+    
+    - name: Run Compliance Checks
+      run: python report.py --format json --output compliance-report.json
+    
+    - name: Upload Compliance Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: compliance-report
+        path: compliance-report.json
+    
+    - name: Comment PR with Compliance Results
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          const report = JSON.parse(fs.readFileSync('compliance-report.json', 'utf8'));
+          
+          const summary = report.summary;
+          const comment = `## 🔍 Compliance Check Results
+          
+          **Summary:**
+          - ✅ Passed: ${summary.passed}
+          - ❌ Failed: ${summary.failed}
+          - ⚠️ Warnings: ${summary.warnings}
+          
+          **Details:**
+          ${report.checks.map(check => 
+            `- ${check.status === 'PASS' ? '✅' : check.status === 'FAIL' ? '❌' : '⚠️'} ${check.name}: ${check.message}`
+          ).join('\n')}
+          `;
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: comment
+          });
+    
+    - name: Fail on Compliance Issues
+      if: failure()
+      run: |
+        echo "❌ Compliance check failed!"
+        echo "Please review the compliance report and fix any issues."
+        exit 1
+
+  security-scan:
+    runs-on: ubuntu-latest
+    needs: terraform-compliance
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Run Trivy vulnerability scanner
+      uses: aquasecurity/trivy-action@master
+      with:
+        scan-type: 'fs'
+        scan-ref: '.'
+        format: 'sarif'
+        output: 'trivy-results.sarif'
+    
+    - name: Upload Trivy scan results
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        sarif_file: 'trivy-results.sarif'

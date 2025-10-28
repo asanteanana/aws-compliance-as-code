@@ -1,0 +1,70 @@
+# Terraform Variables for Different Environments
+# This file demonstrates environment-specific configurations
+
+# Development Environment
+variable "dev_config" {
+  description = "Development environment configuration"
+  type = object({
+    aws_region           = string
+    project_name         = string
+    environment          = string
+    allowed_cidr_blocks  = list(string)
+    log_retention_days   = number
+    enable_debug_logging = bool
+  })
+  default = {
+    aws_region           = "us-west-2"
+    project_name         = "compliance-demo-dev"
+    environment          = "dev"
+    allowed_cidr_blocks  = ["0.0.0.0/0"]  # More permissive for dev
+    log_retention_days   = 7              # Shorter retention for dev
+    enable_debug_logging = true
+  }
+}
+
+# Production Environment
+variable "prod_config" {
+  description = "Production environment configuration"
+  type = object({
+    aws_region           = string
+    project_name         = string
+    environment          = string
+    allowed_cidr_blocks  = list(string)
+    log_retention_days   = number
+    enable_debug_logging = bool
+  })
+  default = {
+    aws_region           = "us-east-1"
+    project_name         = "compliance-demo-prod"
+    environment          = "prod"
+    allowed_cidr_blocks  = ["10.0.0.0/8", "172.16.0.0/12"]  # Restrictive for prod
+    log_retention_days   = 90                               # Longer retention for prod
+    enable_debug_logging = false
+  }
+}
+
+# Compliance Policy Configuration
+variable "compliance_policy" {
+  description = "Compliance policy settings"
+  type = object({
+    require_encryption     = bool
+    require_versioning     = bool
+    require_public_block   = bool
+    require_logging        = bool
+    require_tagging        = bool
+    min_log_retention_days = number
+  })
+  default = {
+    require_encryption     = true
+    require_versioning     = true
+    require_public_block   = true
+    require_logging        = true
+    require_tagging        = true
+    min_log_retention_days = 30
+  }
+  
+  validation {
+    condition = var.compliance_policy.min_log_retention_days >= 7
+    error_message = "Minimum log retention must be at least 7 days for compliance."
+  }
+}
