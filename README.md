@@ -10,11 +10,44 @@ A comprehensive demonstration of implementing compliance controls as code using 
 - **Audit Trail**: CSV export for long-term compliance tracking
 - **Security Best Practices**: Encryption, versioning, access controls, and proper tagging
 
+## 📸 Demo & Screenshots
+
+### Context-Aware Slack Compliance Report
+
+![Slack Compliance Report](./images/slack-compliance-report.png)
+
+*Automated compliance report with risk levels, regulatory mapping, and remediation guides*
+
+### Infrastructure Deployment
+
+![Terraform Plan](./images/terraform-plan.png)
+
+*Terraform plan showing 11 resources with compliance controls*
+
+### S3 Bucket Compliance Configuration
+
+![S3 Bucket Configuration](./images/s3-bucket-config.png)
+
+*Encryption, versioning, and comprehensive tagging on S3 resources*
+
+### AWS Config Integration
+
+![AWS Config Rules](./images/aws-config-console.png)
+
+*AWS Config rules dashboard showing compliance status*
+
+### Terminal Output
+
+![Compliance Check Output](./images/terminal-report.png)
+
+*Python automation checking AWS Config compliance rules*
+
 ## 🏗️ Project Structure
 
 ```
 aws-compliance-as-code/
 │
+├── images/                      # Screenshots and demo images
 ├── main.tf                      # Terraform infrastructure with compliance controls
 ├── variables.tf                 # Terraform variables with validation rules
 ├── outputs.tf                   # Terraform outputs configuration
