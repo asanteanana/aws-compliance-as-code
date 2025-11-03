@@ -14,21 +14,17 @@ A comprehensive demonstration of implementing compliance controls as code using 
 
 ### Compliance-as-Code Report in Slack
 
-![Compliance-as-Code Report in Slack](./images/slack-compliance-report.png)
+![Slack Desktop Integration](./images/slack-desktop-view.png)
+
+
 
 *Context-aware compliance report sent to Slack via ComplianceBot showing detailed compliance status for AWS Config rules. Includes risk levels (High/Medium/Low), regulatory mapping (GDPR, ISO 27001, NIST 800-53), remediation guides, and direct links to AWS documentation for each compliance rule.*
 
 ### Slack Desktop Integration
 
-![Slack Desktop Integration](./images/slack-desktop-view.png)
+![Compliance-as-Code Report in Slack](./images/slack-compliance-report.png)
 
 *Slack desktop application showing ComplianceBot in action within the Slack workspace. Demonstrates the integration workflow where automated compliance reports are delivered directly to team channels or direct messages, enabling real-time compliance monitoring and team collaboration.*
-
-### S3 Bucket Compliance Configuration
-
-![S3 Bucket Compliance Configuration](./images/s3-bucket-config.png)
-
-*S3 bucket configured with compliance best practices: server-side encryption with Amazon S3 managed keys (SSE-S3), bucket key enabled for cost optimization, and comprehensive resource tagging including Project, Environment, Owner, ManagedBy, CostCenter, and Name tags for governance and cost tracking.*
 
 ### AWS Config Rules Dashboard
 
