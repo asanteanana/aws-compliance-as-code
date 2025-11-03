@@ -16,7 +16,7 @@ A comprehensive demonstration of implementing compliance controls as code using 
 
 ![Slack Compliance Report](./images/slack-compliance-report.png)
 
-*Automated compliance report with risk levels, regulatory mapping, and remediation guides*
+*Automated compliance report with risk levels, regulatory mapping, and remediation guides sent directly to Slack*
 
 ### Infrastructure Deployment
 
@@ -28,19 +28,19 @@ A comprehensive demonstration of implementing compliance controls as code using 
 
 ![S3 Bucket Configuration](./images/s3-bucket-config.png)
 
-*Encryption, versioning, and comprehensive tagging on S3 resources*
+*S3 bucket showing server-side encryption (SSE-S3), bucket key enabled, and comprehensive resource tagging for cost tracking and accountability*
 
 ### AWS Config Integration
 
 ![AWS Config Rules](./images/aws-config-console.png)
 
-*AWS Config rules dashboard showing compliance status*
+*AWS Config rules dashboard showing compliance status for managed rules including encryption checks and required tags*
 
 ### Terminal Output
 
 ![Compliance Check Output](./images/terminal-report.png)
 
-*Python automation checking AWS Config compliance rules*
+*Python automation script output showing compliance check results with Slack integration status and CSV export capabilities*
 
 ## Project Structure
 

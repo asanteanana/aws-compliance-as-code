@@ -2,15 +2,16 @@
 
 This directory contains demo screenshots for the README.
 
-## Required Images
+## Images
 
-Please add the following screenshots to this directory:
+All required screenshots are now in this directory:
 
-1. **slack-compliance-report.png** - The detailed Slack compliance report (Screenshot #4)
-2. **terraform-plan.png** - Terraform plan output (Screenshot #2 - terminal)
-3. **s3-bucket-config.png** - S3 bucket configuration showing encryption and tags (Screenshot #1)
-4. **aws-config-console.png** - AWS Config rules dashboard (Screenshot #6)
-5. **terminal-report.png** - Terminal showing compliance check output
+1. **slack-compliance-report.png** - The detailed Slack compliance report message with risk levels and remediation guides
+2. **slack-desktop-view.png** - Slack desktop application showing ComplianceBot conversation
+3. **s3-bucket-config.png** - S3 bucket configuration showing encryption (SSE-S3), bucket key, and resource tags
+4. **aws-config-console.png** - AWS Config rules dashboard showing compliance status for managed rules
+5. **terminal-report.png** - Terminal output showing compliance check results, Slack integration, and CSV export status
+6. **aws-permissions-policies.png** - AWS IAM permissions policies interface (optional, not referenced in main README)
 
 ## How to Add Screenshots
 
