@@ -22,13 +22,16 @@ A comprehensive demonstration of implementing compliance controls as code using 
 
 ### Slack Desktop Integration
 
-![Compliance-as-Code Report in Slack](./images/slack-compliance-report.png)
+![AWS Config Rules Dashboard](./images/aws-config-console.png)
+
 
 *Slack desktop application showing ComplianceBot in action within the Slack workspace. Demonstrates the integration workflow where automated compliance reports are delivered directly to team channels or direct messages, enabling real-time compliance monitoring and team collaboration.*
 
 ### AWS Config Rules Dashboard
 
-![AWS Config Rules Dashboard](./images/aws-config-console.png)
+![Compliance-as-Code Report in Slack](./images/slack-compliance-report.png)
+
+
 
 *AWS Config service showing compliance evaluation results for managed rules. Displays compliance status (Compliant/Non-Compliant), number of non-compliant resources, rule types, and evaluation modes. Rules include encryption checks (`s3-bucket-server-side-encryption-enabled`) and tagging requirements (`required-owner-tag`) for continuous compliance monitoring.*
 
