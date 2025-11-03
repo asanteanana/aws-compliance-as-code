@@ -6,12 +6,14 @@ This directory contains demo screenshots for the README.
 
 All required screenshots are now in this directory:
 
-1. **slack-compliance-report.png** - The detailed Slack compliance report message with risk levels and remediation guides
-2. **slack-desktop-view.png** - Slack desktop application showing ComplianceBot conversation
-3. **s3-bucket-config.png** - S3 bucket configuration showing encryption (SSE-S3), bucket key, and resource tags
-4. **aws-config-console.png** - AWS Config rules dashboard showing compliance status for managed rules
-5. **terminal-report.png** - Terminal output showing compliance check results, Slack integration, and CSV export status
-6. **aws-permissions-policies.png** - AWS IAM permissions policies interface (optional, not referenced in main README)
+1. **slack-compliance-report.png** - Detailed Compliance-as-Code Report in Slack showing compliance status, risk levels, regulatory mapping, and remediation guides
+2. **s3-bucket-config.png** - S3 bucket configuration demonstrating compliance best practices: SSE-S3 encryption, bucket key, and comprehensive resource tagging
+3. **aws-config-console.png** - AWS Config Rules dashboard showing compliance evaluation results for managed rules with compliance status indicators
+4. **aws-permissions-policies.png** - AWS IAM permissions policies interface showing managed policies and access control configuration
+
+Additional images available:
+- **slack-desktop-view.png** - Slack desktop application view showing ComplianceBot conversation
+- **terminal-report.png** - Terminal output showing Python automation script execution with compliance check results
 
 ## How to Add Screenshots
 

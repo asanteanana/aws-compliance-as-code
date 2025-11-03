@@ -12,35 +12,29 @@ A comprehensive demonstration of implementing compliance controls as code using 
 
 ## Demo & Screenshots
 
-### Context-Aware Slack Compliance Report
+### Compliance-as-Code Report in Slack
 
-![Slack Compliance Report](./images/slack-compliance-report.png)
+![Compliance-as-Code Report](./images/slack-compliance-report.png)
 
-*Automated compliance report with risk levels, regulatory mapping, and remediation guides sent directly to Slack*
-
-### Infrastructure Deployment
-
-![Terraform Plan](./images/terraform-plan.png)
-
-*Terraform plan showing 11 resources with compliance controls*
+*Context-aware compliance report sent to Slack via ComplianceBot showing detailed compliance status for AWS Config rules. Includes risk levels (High/Medium/Low), regulatory mapping (GDPR, ISO 27001, NIST 800-53), remediation guides, and direct links to AWS documentation for each compliance rule.*
 
 ### S3 Bucket Compliance Configuration
 
 ![S3 Bucket Configuration](./images/s3-bucket-config.png)
 
-*S3 bucket showing server-side encryption (SSE-S3), bucket key enabled, and comprehensive resource tagging for cost tracking and accountability*
+*S3 bucket configured with compliance best practices: server-side encryption with Amazon S3 managed keys (SSE-S3), bucket key enabled for cost optimization, and comprehensive resource tagging including Project, Environment, Owner, ManagedBy, CostCenter, and Name tags for governance and cost tracking.*
 
-### AWS Config Integration
+### AWS Config Rules Dashboard
 
-![AWS Config Rules](./images/aws-config-console.png)
+![AWS Config Rules Dashboard](./images/aws-config-console.png)
 
-*AWS Config rules dashboard showing compliance status for managed rules including encryption checks and required tags*
+*AWS Config service showing compliance evaluation results for managed rules. Displays compliance status (Compliant/Non-Compliant), number of non-compliant resources, rule types, and evaluation modes. Rules include encryption checks (`s3-bucket-server-side-encryption-enabled`) and tagging requirements (`required-owner-tag`) for continuous compliance monitoring.*
 
-### Terminal Output
+### AWS IAM Permissions Policies
 
-![Compliance Check Output](./images/terminal-report.png)
+![AWS IAM Permissions](./images/aws-permissions-policies.png)
 
-*Python automation script output showing compliance check results with Slack integration status and CSV export capabilities*
+*IAM user permissions policies interface showing managed policies attached to users. Demonstrates least-privilege access control and policy management for compliance with security best practices and audit requirements.*
 
 ## Project Structure
 
