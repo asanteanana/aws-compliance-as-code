@@ -14,13 +14,13 @@ A comprehensive demonstration of implementing compliance controls as code using 
 
 ### Compliance-as-Code Report in Slack
 
-![Compliance-as-Code Report](./images/slack-compliance-report.png)
+![Compliance-as-Code Report in Slack](./images/slack-compliance-report.png)
 
 *Context-aware compliance report sent to Slack via ComplianceBot showing detailed compliance status for AWS Config rules. Includes risk levels (High/Medium/Low), regulatory mapping (GDPR, ISO 27001, NIST 800-53), remediation guides, and direct links to AWS documentation for each compliance rule.*
 
 ### S3 Bucket Compliance Configuration
 
-![S3 Bucket Configuration](./images/s3-bucket-config.png)
+![S3 Bucket Compliance Configuration](./images/s3-bucket-config.png)
 
 *S3 bucket configured with compliance best practices: server-side encryption with Amazon S3 managed keys (SSE-S3), bucket key enabled for cost optimization, and comprehensive resource tagging including Project, Environment, Owner, ManagedBy, CostCenter, and Name tags for governance and cost tracking.*
 
@@ -32,7 +32,7 @@ A comprehensive demonstration of implementing compliance controls as code using 
 
 ### AWS IAM Permissions Policies
 
-![AWS IAM Permissions](./images/aws-permissions-policies.png)
+![AWS IAM Permissions Policies](./images/aws-permissions-policies.png)
 
 *IAM user permissions policies interface showing managed policies attached to users. Demonstrates least-privilege access control and policy management for compliance with security best practices and audit requirements.*
 
